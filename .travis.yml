@@ -13,7 +13,6 @@ env:
   - DJANGO=1.9.1
 
 before_install:
-  - export DJANGO_SETTINGS_MODULE=kicktravel.settings
   - export PYTHONPATH=$HOME/builds/AShedko/kicktravel
   - export PIP_USE_MIRRORS=true
 
@@ -22,4 +21,4 @@ install:
   - pip install django==$DJANGO --quiet
 
 script:
-  - python manage.py syncdb --noinput
+  - python manage.py test --noinput
