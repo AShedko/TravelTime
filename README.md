@@ -1,6 +1,6 @@
 # KickTravel
 
-![Test Logo](https://github.com/AShedko/kicktravel/blob/master/test_logo.png)
+<center><img src="https://github.com/AShedko/kicktravel/blob/master/test_logo.png" height="200" align="middle"> </center>
 
 [![Build Status](https://travis-ci.org/AShedko/kicktravel.svg?branch=master)](https://travis-ci.org/AShedko/kicktravel)
 
