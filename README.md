@@ -1,6 +1,6 @@
 # KickTravel
 
-![Test Logo](https://octodex.github.com/AShedko/kicktravel/test_logo.png)
+![Test Logo](https://github.com/AShedko/kicktravel/blob/master/test_logo.png)
 
 [![Build Status](https://travis-ci.org/AShedko/kicktravel.svg?branch=master)](https://travis-ci.org/AShedko/kicktravel)
 
