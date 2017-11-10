@@ -4,7 +4,6 @@ python:
 # command to install dependencies
 install:
   - pip install -r requirements.txt
-  - pip install bootstrap3
 # command to run tests
 script:
   - pytest # or py.test for Python versions 3.5 and below
@@ -19,6 +18,7 @@ before_install:
 install:
   - pip install -r requirements.txt
   - pip install django==$DJANGO --quiet
+  - pip install bootstrap3
 
 script:
   - python manage.py test --noinput
