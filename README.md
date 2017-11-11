@@ -1,6 +1,6 @@
-# KickTravel
+# TravelTime
 
-<center><img src="https://github.com/AShedko/kicktravel/blob/master/test_logo.png" height="200" align="middle"> </center>
+<center><img src="https://github.com/AShedko/kicktravel/blob/master/logoTT.jpg" height="200" align="middle"> </center>
 
 [![Build Status](https://travis-ci.org/AShedko/kicktravel.svg?branch=master)](https://travis-ci.org/AShedko/kicktravel)
 
@@ -15,3 +15,8 @@ SCRUM:
 
 Список версий:
 https://docs.google.com/document/d/15kDblGW-fyCqJO53wpTI9ixilkwOz0zlRz9RIEcEhNE/edit
+
+How to run:
+
+`python3 manage.py runserver` запускает проект в режиме разработчка
+`python3 manage.py migrate` меняет модель данных в соответсвии с кодом
