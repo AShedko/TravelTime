@@ -20,7 +20,7 @@ https://docs.google.com/document/d/15kDblGW-fyCqJO53wpTI9ixilkwOz0zlRz9RIEcEhNE/
 
 перед запуском:
 `
-pip install requirements.txt
+pip install -r requirements.txt
 `
 * `python3 manage.py runserver` запускает проект в режиме разработчка
 * `python3 manage.py migrate` меняет модель данных в соответсвии с кодом
