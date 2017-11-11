@@ -16,7 +16,11 @@ SCRUM:
 Список версий:
 https://docs.google.com/document/d/15kDblGW-fyCqJO53wpTI9ixilkwOz0zlRz9RIEcEhNE/edit
 
-How to run:
+Как запускать:
 
-`python3 manage.py runserver` запускает проект в режиме разработчка
-`python3 manage.py migrate` меняет модель данных в соответсвии с кодом
+перед запуском:
+`
+pip install requirements.txt
+`
+* `python3 manage.py runserver` запускает проект в режиме разработчка
+* `python3 manage.py migrate` меняет модель данных в соответсвии с кодом
