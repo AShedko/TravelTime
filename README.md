@@ -1,8 +1,8 @@
 # KickTravel
 
-<center><img src="https://github.com/AShedko/kicktravel/blob/master/test_logo.png" height="200" align="middle"> </center>
+<center><img src="https://github.com/AShedko/TravelTime/blob/master/test_logo.png" height="200" align="middle"> </center>
 
-[![Build Status](https://travis-ci.org/AShedko/kicktravel.svg?branch=master)](https://travis-ci.org/AShedko/kicktravel)
+[![Build Status](https://travis-ci.org/AShedko/TravelTime.svg?branch=master)](https://travis-ci.org/AShedko/TravelTime)
 
 YOUR travel planner
 
