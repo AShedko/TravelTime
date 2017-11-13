@@ -27,3 +27,4 @@ https://djbook.ru/examples/77/
 
 * `python3 manage.py runserver` запускает проект в режиме разработчка
 * `python3 manage.py migrate` меняет модель данных в соответсвии с кодом
+* `python3 manage.py migrate --run-syncdb` мигрируем базу
