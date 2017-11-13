@@ -25,7 +25,7 @@ SECRET_KEY = '@9psj!csc=%h#5la!&+-l0f)tb8*k5^4_6wux&r$ehjw*iq&2y'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'kicktravel.pythonanywhere.com']
 
 
 # Application definition
@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'bootstrap3'
+    'bootstrap3',
+    'blog',
 ]
 
 MIDDLEWARE = [
@@ -53,7 +54,8 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'TravelTime.urls'
 
 TEMPLATES = [
-    {
+    # placeholder nodes for all parameters
+  {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [],
         'APP_DIRS': True,
@@ -121,7 +123,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
