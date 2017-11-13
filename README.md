@@ -1,8 +1,8 @@
-# KickTravel
+# TravelTime
 
-<center><img src="https://github.com/AShedko/TravelTime/blob/master/test_logo.png" height="200" align="middle"> </center>
+<center><img src="https://github.com/AShedko/kicktravel/blob/master/logoTT.jpg" height="200" align="middle"> </center>
 
-[![Build Status](https://travis-ci.org/AShedko/TravelTime.svg?branch=master)](https://travis-ci.org/AShedko/TravelTime)
+[![Build Status](https://travis-ci.org/AShedko/TravelTime.svg?branch=master)](https://travis-ci.org/AShedko/kicktravel)
 
 YOUR travel planner
 
@@ -15,3 +15,15 @@ SCRUM:
 
 Список версий:
 https://docs.google.com/document/d/15kDblGW-fyCqJO53wpTI9ixilkwOz0zlRz9RIEcEhNE/edit
+
+Как запускать:
+
+перед запуском:
+`
+pip install -r requirements.txt
+`
+настройка postgres для джанго
+https://djbook.ru/examples/77/
+
+* `python3 manage.py runserver` запускает проект в режиме разработчка
+* `python3 manage.py migrate` меняет модель данных в соответсвии с кодом
