@@ -53,7 +53,8 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'TravelTime.urls'
 
 TEMPLATES = [
-    {
+    # placeholder nodes for all parameters
+  {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [],
         'APP_DIRS': True,
