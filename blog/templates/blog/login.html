@@ -1,0 +1,53 @@
+{% load staticfiles %}
+<link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+<head>
+		<title>KickTravel</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+</head>
+
+
+{% block content %}
+<!DOCTYPE html>
+<div class="container">
+	<div class="row">
+	<div class="modal-content">
+
+    					<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="fa fa-times"></i></button>
+							<h4 class="modal-title">Ready to Login?</h4>
+						</div>
+
+						<form action="" method="post">{% csrf_token %}
+							<div class="modal-body">
+								<div class="form-group">
+									<label for="userEmail">User Name</label>
+									<input type="text" class="form-control" required="" name="username" value="">
+									<span class="help-block">Be smart.</span>
+								</div>
+								<div class="row">
+									<div class="col-md-6">
+										<div class="form-group">
+											<label for="password">Password</label>
+											<input type="password" class="form-control" required="" name="password1" value="">
+											<span class="help-block">Choose a password for your new account.</span>
+										</div>
+									</div>
+							
+								</div>
+							</div>
+
+							<div class="modal-footer">
+								<input type="hidden" name="isEmpty" value="">
+								<button type="input" name="submit" value="newAccount" class="btn btn-success btn-icon"><i class="fa fa-check"></i> Login</button>
+								<button type="button" class="btn btn-default btn-icon" data-dismiss="modal"><i class="fa fa-times-circle"></i> Cancel</button>
+							</div>
+						</form>
+
+					</div>
+	</div>
+</div>
+{% endblock %}
+
