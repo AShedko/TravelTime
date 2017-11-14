@@ -25,7 +25,7 @@ SECRET_KEY = '@9psj!csc=%h#5la!&+-l0f)tb8*k5^4_6wux&r$ehjw*iq&2y'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'kicktravel.pythonanywhere.com']
 
 
 # Application definition
@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'bootstrap3'
+    'bootstrap3',
+    'blog',
 ]
 
 MIDDLEWARE = [
@@ -80,14 +81,14 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     },
-    'prod':{
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'django_db',
-        'USER' : 'user_name',
-        'PASSWORD' : 'password',
-        'HOST' : '127.0.0.1',
-        'PORT' : '5432',
-    }
+    # 'prod':{
+    #     'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    #     'NAME': 'django_db',
+    #     'USER' : 'user_name',
+    #     'PASSWORD' : 'password',
+    #     'HOST' : '127.0.0.1',
+    #     'PORT' : '5432',
+    # }
 }
 
 
@@ -122,7 +123,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
