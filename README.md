@@ -1,6 +1,6 @@
 # TravelTime
 
-<center><img src="https://github.com/AShedko/kicktravel/blob/master/logoTT.jpg" height="200" align="middle"> </center>
+<center><img src="https://github.com/AShedko/TravelTime/blob/master/logoTT.jpg" height="200" align="middle"> </center>
 
 [![Build Status](https://travis-ci.org/AShedko/TravelTime.svg?branch=master)](https://travis-ci.org/AShedko/TravelTime)
 
