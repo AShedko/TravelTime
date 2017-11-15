@@ -17,7 +17,11 @@ from django.contrib.auth import authenticate
 def post_list(request):
 	posts = Post.objects.order_by('created_date')
 	#return render(request, 'blog/title.html', {'posts':posts})
-	return render(request, 'blog/posts.html', {'posts': posts})
+	return render(request, 'blog/title2.html', {'posts': posts})
+def profile(request):
+	#posts = Post.objects.order_by('created_date')
+	#return render(request, 'blog/title.html', {'posts':posts})
+	return render(request, 'blog/profile.html')
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
     return render(request, 'blog/post_detail.html', {'post': post})
@@ -28,17 +32,9 @@ def register(request):
 		form.save()
 		return HttpResponseRedirect(reverse('post_list'))
 	return render(request, 'blog/register.html', {'form': form})	
+def test(request):
+	return render(request, 'blog/title2.html')
 
-def login_view(request):
-	form = UserCreationForm(data=request.POST or None)
-	if request.method == 'POST':
-			username = form['username']
-			password = form['password1']
-			user = authenticate(username=username, password=password)
-			if user is not None:
-				login(request,user)
-				return HttpResponseRedirect(reverse('post_list'))
-	return render(request, 'blog/login.html', {'form': form})	
 	
 def post_new(request):
     if request.method == "POST":

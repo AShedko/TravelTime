@@ -20,23 +20,12 @@
 							<h4 class="modal-title">Ready to Login?</h4>
 						</div>
 
-						<form action="" method="post">{% csrf_token %}
+						<form method="post">    
+							{% csrf_token %}
 							<div class="modal-body">
 								<div class="form-group">
-									<label for="userEmail">User Name</label>
-									<input type="text" class="form-control" required="" name="username" value="">
-									<span class="help-block">Be smart.</span>
-								</div>
-								<div class="row">
-									<div class="col-md-6">
-										<div class="form-group">
-											<label for="password">Password</label>
-											<input type="password" class="form-control" required="" name="password1" value="">
-											<span class="help-block">Choose a password for your new account.</span>
-										</div>
-									</div>
-							
-								</div>
+							{{ form.as_p }}
+							</div>
 							</div>
 
 							<div class="modal-footer">
