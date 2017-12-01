@@ -1,5 +1,8 @@
 from django.contrib import admin
 from .models import Post
+from .models import Profile
+#from .models import Profile_groups
 admin.site.register(Post)
-
+#admin.site.register(Profile_groups)
+admin.site.register(Profile)
 # Register your models here.
