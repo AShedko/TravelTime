@@ -21,12 +21,11 @@ class UserForm(forms.ModelForm):
 class ProfileForm(forms.ModelForm):
 	class Meta:
 		model = Profile
-		#location = forms.CharField(label='location', widget=beautyWidget, max_length=25)
 		class Meta:
 			widgets = {
             'location': forms.TextInput(attrs={'class': "form-control"}), # or whatever class you want to apply
             # and so on
 			}
-		fields = ('location','birth_date')
-		#required_css_class = 'form-group'
+		fields = ('location','birth_date','travel_groups')
+		
 		

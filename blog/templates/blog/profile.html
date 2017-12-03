@@ -63,10 +63,11 @@
 			
             
 			<li><a href="">Логин: {{ user.username }}</a></li>
-			<li><a href="">Группы: {{ user.groups }}</a></li>
+			<li><a href="">Права: {{ user.groups }}</a></li>
 			<li><a href="">Имя пользователя: {{ user.first_name}} {{ user.last_name}}</a></li>
 			<li><a href="">Местоположение: {{ user.profile.location }}</a></li>
 			<li><a href="">Дата рождения: {{ user.profile.birth_date }}</a></li>
+			<li><a href="">Мои группы: {{ user.profile.travel_groups.all }}</a></li>
 			<li class = "active"><a href="profile_temp">Обновить профиль</a></li>
 
           </ul>
