@@ -1,7 +1,32 @@
 {% block content %}
-    <h1>New post</h1>
-    <form method="POST" class="post-form">{% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="save btn btn-default">Save</button>
-    </form>
+<form method="post">
+  {% csrf_token %}
+  {% load staticfiles %}
+  {% load bootstrap3 %}
+<link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+<head>
+<title>TravelTime</title>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+</head>
+<div class="modal-body">
+<div class="form-group">
+<div class="container">
+<div class="row">
+<div class="modal-content">
+	<div class="modal-header">							
+	<h4 class="modal-title">Новое путешествие</h4>
+	</div>
+	<div class="modal-body">
+	<div class="form-group">
+	{% bootstrap_form form layout="horizontal" %}
+
+	<button type="input" name="submit" value="newAccount" class="btn btn-success btn-icon"><i class="fa fa-check">Отправиться!</button>																		
+	</div>
+	</div>
+</div>
+</div>
+
 {% endblock %}

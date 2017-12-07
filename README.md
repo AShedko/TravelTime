@@ -1,6 +1,6 @@
 # TravelTime
 
-<center><img src="https://github.com/AShedko/kicktravel/blob/master/logoTT.jpg" height="200" align="middle"> </center>
+<center><img src="https://github.com/AShedko/TravelTime/blob/master/logoTT.jpg" height="200" align="middle"> </center>
 
 [![Build Status](https://travis-ci.org/AShedko/TravelTime.svg?branch=master)](https://travis-ci.org/AShedko/TravelTime)
 
@@ -27,3 +27,4 @@ https://djbook.ru/examples/77/
 
 * `python3 manage.py runserver` запускает проект в режиме разработчка
 * `python3 manage.py migrate` меняет модель данных в соответсвии с кодом
+* `python3 manage.py migrate --run-syncdb` мигрируем базу

@@ -1,0 +1,126 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<!-- saved from url=(0042)http://bootstrap-ru.com/examples/hero.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Bootstrap, from Twitter</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="author" content="">
+
+<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}"rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/dashboard.css' %}" rel="stylesheet">
+        <
+
+<style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
+<link rel="stylesheet" href="{% static 'css/bootstrap-responsive.css' %}"rel="stylesheet">
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="http://bootstrap-ru.com/assets/ico/apple-touch-icon-144-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://bootstrap-ru.com/assets/ico/apple-touch-icon-114-precomposed.png">
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://bootstrap-ru.com/assets/ico/apple-touch-icon-72-precomposed.png">
+<link rel="apple-touch-icon-precomposed" href="http://bootstrap-ru.com/assets/ico/apple-touch-icon-57-precomposed.png">
+<link rel="shortcut icon" href="http://bootstrap-ru.com/assets/ico/favicon.png">
+</head>
+<body>
+<div class="navbar navbar-inverse navbar-fixed-top">
+<div class="navbar-inner">
+<div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</a>
+<a class="brand" href="http://bootstrap-ru.com/examples/hero.html#">Travel Time</a>
+<div class="nav-collapse collapse">
+<ul class="nav">
+<li class="active"><a href="">Домой</a></li>
+<li><a href="{% url 'profile' %}">Профиль</a></li>
+<li><a href="{% url 'register' %}" class="top-menu">Регистрация</a></li>
+<li><a href="{% url 'login' %}" class="top-menu">Войти</a></li>
+<li><a href="{% url 'post_new' %}"  class="top-menu">Новый пост</a></li>
+
+</ul>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="hero-unit">
+<h1>Привет, путешественник!</h1>
+<hr>
+<img src ="https://www.onetwotrip.com/ru/blog/static/images/travel-now/time-to-travel.jpg" alt="Lights" style="width:100%" >
+
+<hr>
+<p>Путеше́ствие — передвижение по какой-либо территории или акватории с целью их изучения, а также с общеобразовательными, познавательными, спортивными и другими целями.
+
+До XIX века путешествия были одним из основных источников получения сведений о тех или иных странах (их природе, населении, истории, хозяйстве), общем характере и очертании поверхности Земли.
+
+От античного времени сохранились описания путешествий Геродота, учёных, сопровождавших Александра Македонского в его походах. Классический пример путешествия Средневековья — странствования Марко Поло и Афанасия Никитина. Путешествие с религиозными целями (для поклонения святыням, посещения святых мест) в Средние века получило название «паломничество»; русские паломники, в числе которых, например, игумен Даниил, оставляли путевые записки о своих путешествиях, получившие название хожений. Эпоха Великих географических открытий характерна многими путешествиями, в корне изменившими представление о планете.</p>
+<p><a class="btn btn-primary btn-large">Узнать больше </a></p>
+</div>
+	
+{% for post in posts %}
+
+	{% if forloop.first %}
+	<div class="row">
+	{% endif %}
+	{% if forloop.counter|divisibleby:4 %}
+	</div class="row">
+	<div class="row">
+	{% endif %}
+	<div class="span4">
+	<h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }} <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a></a></h2>
+		<div class="col-md-4">
+      <div class="thumbnail">
+        <a href="http://biosea-cosmetics.ru/images/biosea_france_2.png" target="_blank">
+          <img src="http://biosea-cosmetics.ru/images/biosea_france_2.png" alt="Lights" style="width:100%">
+          <div class="caption">
+          </div>
+        </a>
+      </div>
+    </div>
+
+
+	<i><p>{{ post.created_date }}</p></i>
+	</div>
+{% empty %}
+<p>Нет постов</p>
+</div>
+{% endfor %}
+</div class="row">
+
+<hr>
+</div>
+
+
+
+</div> 
+
+
+<script src="./Bootstrap, from Twitter_files/jquery.js.Без названия"></script>
+<script src="./Bootstrap, from Twitter_files/bootstrap-transition.js.Без названия"></script>
+<script src="./Bootstrap, from Twitter_files/bootstrap-alert.js.Без названия"></script>
+<script src="./Bootstrap, from Twitter_files/bootstrap-modal.js.Без названия"></script>
+<script src="./Bootstrap, from Twitter_files/bootstrap-dropdown.js.Без названия"></script>
+<script src="./Bootstrap, from Twitter_files/bootstrap-scrollspy.js.Без названия"></script>
+<script src="./Bootstrap, from Twitter_files/bootstrap-tab.js.Без названия"></script>
+<script src="./Bootstrap, from Twitter_files/bootstrap-tooltip.js.Без названия"></script>
+<script src="./Bootstrap, from Twitter_files/bootstrap-popover.js.Без названия"></script>
+<script src="./Bootstrap, from Twitter_files/bootstrap-button.js.Без названия"></script>
+<script src="./Bootstrap, from Twitter_files/bootstrap-collapse.js.Без названия"></script>
+<script src="./Bootstrap, from Twitter_files/bootstrap-carousel.js.Без названия"></script>
+<script src="./Bootstrap, from Twitter_files/bootstrap-typeahead.js.Без названия"></script>
+
+
+</body></html>
