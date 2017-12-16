@@ -13,15 +13,17 @@ class PostsTestCase(TestCase):
                             text="this is a test post",created_date=timezone.now())
         p.save()
 
-    def posts_are_postable(self):
+    def test_posts_are_postable(self):
         p = Post.objects.get(title='test_post')
         self.assertIsNotNone(p, "Post was created")
         self.assert_(p.publish(), "Posts are publishable")
         self.fail("FAIL")
 
 class LoginTest(TestCase):
-    c = Client()
-    resp = c.post("/login/",{'username': 'test', 'password':'passwd22'})
+    def test_login(self):
+        c = Client()
+        resp = c.post("/login/",{'username': 'test', 'password':'passwd22'})
+        self.assertEquals(resp.status,200, "login with correct credentials is possible")
 
 # t1 = PostsTestCase()
 # t2 = LoginTest()
