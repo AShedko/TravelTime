@@ -39,28 +39,29 @@ def update_profile(request):
     })
 
 def post_list(request):
-	posts = Post.objects.order_by('created_date')
-	return render(request, 'blog/title2.html', {'posts': posts})
+    posts = Post.objects.order_by('created_date')
+    return render(request, 'blog/title2.html', {'posts': posts})
 
 def profile(request):
-	#posts = Post.objects.order_by('created_date')
-	#return render(request, 'blog/title.html', {'posts':posts})
-	return render(request, 'blog/profile.html')
+    #posts = Post.objects.order_by('created_date')
+    #return render(request, 'blog/title.html', {'posts':posts})
+    return render(request, 'blog/profile.html')
 
 def post_detail(request, pk):
     post = get_object_or_404(Post, pk=pk)
     return render(request, 'blog/post_detail.html', {'post': post})
 
 def register(request):
-	form = UserCreationForm(data=request.POST or None)
-	if request.method == 'POST' and form.is_valid():
-		form.save()
-		return HttpResponseRedirect(reverse('post_list'))
-	return render(request, 'blog/register.html', {'form': form})	
-def test(request):
-	return render(request, 'blog/title2.html')
+    form = UserCreationForm(data=request.POST or None)
+    if request.method == 'POST' and form.is_valid():
+        form.save()
+        return HttpResponseRedirect(reverse('post_list'))
+    return render(request, 'blog/register.html', {'form': form})
 
-	
+def test(request):
+    return render(request, 'blog/title2.html')
+
+
 def post_new(request):
     if request.method == "POST":
         form = PostForm(request.POST)
@@ -72,7 +73,7 @@ def post_new(request):
     else:
         form = PostForm()
     return render(request, 'blog/post_edit.html', {'form': form})
-	
+
 def post_edit(request, pk):
     post = get_object_or_404(Post, pk=pk)
     if request.method == "POST":
