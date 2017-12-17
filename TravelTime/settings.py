@@ -25,7 +25,7 @@ SECRET_KEY = '@9psj!csc=%h#5la!&+-l0f)tb8*k5^4_6wux&r$ehjw*iq&2y'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'kicktravel.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'kicktravel.pythonanywhere.com', 'testserver']
 
 
 # Application definition
